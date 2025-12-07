@@ -4,7 +4,7 @@
 > *Protecting the "Unconnected" with Passive Sensing & Generative AI.*
 
 [![Live Demo](https://img.shields.io/badge/Demo-Live_Dashboard-success?style=for-the-badge)](https://dashboard-a4tjts8ft-dickyactuals-projects.vercel.app/)
-[![Mobile Sensor](https://img.shields.io/badge/IoT-Sensor_Node-blue?style=for-the-badge)]((https://dashboard-a4tjts8ft-dickyactuals-projects.vercel.app/sensor.html))
+[![Mobile Sensor](https://img.shields.io/badge/IoT-Sensor_Node-blue?style=for-the-badge)](https://dashboard-a4tjts8ft-dickyactuals-projects.vercel.app/sensor.html)
 
 ## 🚨 The Problem
 Japan faces a shortage of 690,000 caregivers by 2040. Millions of elderly people live alone (*dokkyo rojin*) and cannot use complex interfaces like Apple Watches. When they fall or suffer heatstroke, they often cannot call for help.
