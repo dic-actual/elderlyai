@@ -1,0 +1,12 @@
+{
+  "name": "elderly-ai-backend",
+  "version": "1.0.0",
+  "description": "Simulated backend for ElderlyAI",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^12.0.0"
+  }
+}
