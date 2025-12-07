@@ -1,62 +1,100 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 @theme {
-  --color-neon-green: #39ff14;
-  --color-neon-red: #ff073a;
-  --color-neon-yellow: #fff01f;
-  --color-dark-bg: #050505;
-  --color-panel-bg: #111;
+  /* Premium Dark Palette (Zinc) */
+  --color-dark-bg: #09090b;
+  /* Rich Black */
+  --color-dark-card: #18181b;
+  /* Zinc-900 */
+  --color-dark-border: #27272a;
+  /* Zinc-800 */
+  --color-dark-text-primary: #fafafa;
+  /* Off-white */
+  --color-dark-text-secondary: #a1a1aa;
+  /* Zinc-400 */
 
-  --animate-pulse-fast: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --color-accent-red: #f87171;
+  /* Red-400 */
+  --color-accent-red-bg: #450a0a;
+  /* Red-950 */
+
+  --color-accent-green: #4ade80;
+  /* Green-400 */
+  --color-accent-green-bg: #052e16;
+  /* Green-950 */
+
+  --color-accent-blue: #60a5fa;
+  /* Blue-400 */
+  --color-accent-blue-bg: #172554;
+  /* Blue-950 */
+
+  --color-accent-orange: #fb923c;
+  /* Orange-400 */
+  --color-accent-orange-bg: #431407;
+  /* Orange-950 */
+
+  /* Animations */
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --animate-pop: pop 0.4s var(--ease-spring) forwards;
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 body {
-  background-color: #050505;
-  color: #e0e0e0;
-  font-family: 'Courier New', Courier, monospace;
-  /* Cyber look */
+  background-color: var(--color-dark-bg);
+  color: var(--color-dark-text-primary);
+  font-family: 'Plus Jakarta Sans', 'Noto Sans JP', system-ui, sans-serif;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Custom Scrollbar */
+/* Dark Card Style */
+.dark-card {
+  background-color: var(--color-dark-card);
+  border: 1px solid var(--color-dark-border);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  animation: pop 0.4s var(--ease-spring) forwards;
+  transition: border-color 0.2s ease;
+}
+
+.dark-card:hover {
+  border-color: #3f3f46;
+  /* Zinc-700 on hover */
+}
+
+/* Custom Scrollbar (Dark) */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #111;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 4px;
+  background: #27272a;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #3f3f46;
 }
 
-.glass-panel {
-  background: rgba(20, 20, 20, 0.8);
-  backdrop-filter: blur(10px);
-  border: 1px solid #333;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-
-.neon-border-green {
-  box-shadow: 0 0 10px #39ff14, inset 0 0 5px #39ff14;
-  border-color: #39ff14;
-}
-
-.neon-border-red {
-  box-shadow: 0 0 10px #ff073a, inset 0 0 5px #ff073a;
-  border-color: #ff073a;
-}
-
-.neon-text-green {
-  text-shadow: 0 0 5px #39ff14;
-}
-
-.neon-text-red {
-  text-shadow: 0 0 5px #ff073a;
+/* Grid Texture Background */
+.texture-bg {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
 }
